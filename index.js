@@ -1,11 +1,12 @@
-am5.ready(function () {
+
+    am5.ready(function () {
 
     var root = am5.Root.new("chartdiv");
-
+    
     root.setThemes([
-        am5themes_Animated.new(root)
+        am5themes_Responsive.new(root)
     ]);
-   
+
     var chart = root.container.children.push(
         am5percent.PieChart.new(root, {
             endAngle: 270
@@ -26,36 +27,38 @@ am5.ready(function () {
 
     series.data.setAll([{
         category: "Python",
-        value: 18.04 * 36,
-    }, {
-        category: "C++",
-        value: 9.65 * 36
-    }, {
-        category: "C",
-        value: 4.57 * 36
-    }, {
-        category: "C#",
-        value: 3.43 * 36
-    }, {
-        category: "Java",
-        value: 11.77 * 36
+        value: 18,
     }, {
         category: "JavaScript",
-        value: 9.94 * 36
+        value: 12
+    }, {
+        category: "Java",
+        value: 11
     }, {
         category: "Go",
-        value: 10.00 * 36
+        value: 10
     }, {
-        category: "Ruby",
-        value: 4.53 * 36
-    },
-    {
+        category: "C++",
+        value: 9
+    }, {
         category: "TypeScript",
-        value: 7.46 * 36
+        value: 8
     }, {
         category: "PHP",
-        value: 5.48 * 36
-    }
+        value: 6
+    }, {
+        category: "C",
+        value: 5
+    }, {
+        category: "C#",
+        value: 4
+    }, {
+        category: "Ruby",
+        value: 3
+    },  {
+        category: "Остальные",
+        value: 14
+    }, 
     ]);
 
     series.appear(1000, 300);
