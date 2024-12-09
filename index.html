@@ -17,15 +17,14 @@
     <div class="input-container">
         <label class="label" for="arrayCount">Введите количество элементов в массиве:</label>
         <input id="arrayCount" type="number" placeholder="0" min="0">
-        
-        <label class="label" for="optionsInput">Выберите алгоритм сортировки:</label>
-        <input id="optionsInput" list="options" placeholder="Выберите вариант">
-        <datalist id="options">
-            <option value="Бинарный поиск">
-            <option value="Линейный поиск">
-            <option value="Сортировка выбором">
-        </datalist>
-        <input class="button" type="button" value="Отправить">
+        <label class="label" for="city-select">Выберите алгоритм сортировки:</label>
+        <select name="city" id="city-select">
+            <option value="binary">Бинарный поиск</option>
+            <option value="bubble">Сортировки пузырьком</option>
+            <option value="quick">Быстрая сортировка</option>
+            <option value="huffman">Кодирование Хаффмена</option>
+          </select>
+        <input class="button" id="button" type="button" value="Отправить">
     </div>
     <div id="chartdiv"></div>
     <div id="chartdiv1"></div>

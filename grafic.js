@@ -16,42 +16,43 @@ root.setThemes([
 
 //                                АЛГОРИТМЫ
 
+let algorithm = {
+  "binary": binarySearch, 
+  "selectionSort": 'selectionSort',
+  "insertionSort": 'insertionSort',
+  "mergeSort": 'mergeSort',
+}
+let input = document.getElementById('arrayCount');
+let button = document.getElementById('button');
+let select = document.getElementById('city-select');
 
-
-
-
-
-
-
-let input = document.querySelector('input');
-var arrayCount;
-input.addEventListener('keydown', (event) => {
-  if (event.key === 'Enter') {
-    if (input.value <= 1000 && input.value > 0) { 
-      arrayCount = parseInt(input.value);
-      input.value = ''
-    } else { 
-      alert('Введите число от 1 до 1000')
-      input.value = '' 
-    }
+button.addEventListener('click', () => {
+  let arrayCount = getValue()
+  if(arrayCount) {
+    const numbers = Array.from({ length: arrayCount }, (_, index) => index + 1);
+    var selectValue = select.value
+    algorithm[selectValue](numbers)    
   }
-  console.log(arrayCount);
-  let algorithm = {
-    // "bubbleSort": binarySearch(), 
-    "selectionSort": 'selectionSort',
-    "insertionSort": 'insertionSort',
-    "mergeSort": 'mergeSort',
-  }
-  const numbers = Array.from({ length: arrayCount }, (_, index) => index + 1);
-  console.log(numbers);
 })
+// if (result !== -1) {
+//   console.log(`Элемент найден на индексе: ${result}`);
+// } else {
+//   console.log('Элемент не найден');
+// }
 
+function getValue() {
+  if (input.value <= 1000 && input.value > 0) {
+    var array = parseInt(input.value);
+    input.value = ''
+  } else {
+    alert('Введите число от 1 до 1000')
+    input.value = ''
+  }
+  return array
+}
 
-// for (arrayCount)
-const sortedArray = [];
-
-
-function binarySearch(arr, target) {
+function binarySearch(arr) {
+  let target = arr.length
   let left = 0;
   let right = arr.length - 1;
   while (left <= right) {
@@ -67,21 +68,6 @@ function binarySearch(arr, target) {
   }
   return -1;
 }
-
-const target = 9;
-const result = binarySearch(sortedArray, target);
-
-if (result !== -1) {
-  console.log(`Элемент найден на индексе: ${result}`);
-} else {
-  console.log('Элемент не найден');
-}
-
-
-
-
-
-
 
 
 //                                АЛГОРИТМЫ
