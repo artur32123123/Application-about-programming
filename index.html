@@ -9,16 +9,34 @@
 </head>
 
 <body>
-    <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
     <script src="https://cdn.amcharts.com/lib/5/percent.js"></script>
-    <script src="https://cdn.amcharts.com/lib/5/themes/Responsive.js"></script>
     <script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/themes/Responsive.js"></script>
     <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
-    <script src="index.js"></script>
-    <script src="grafic.js"></script>
-    <h1>Топ популярных языков программирования</h1>
-    <!-- <div id="chartdiv"></div> -->
+    <div class="input-container">
+        <label class="label" for="arrayCount">Введите количество элементов в массиве:</label>
+        <input id="arrayCount" type="number" placeholder="0" min="0">
+        
+        <label class="label" for="optionsInput">Выберите алгоритм сортировки:</label>
+        <input id="optionsInput" list="options" placeholder="Выберите вариант">
+        <datalist id="options">
+            <option value="Бинарный поиск">
+            <option value="Линейный поиск">
+            <option value="Сортировка выбором">
+        </datalist>
+        <input class="button" type="button" value="Отправить">
+    </div>
+    <div id="chartdiv"></div>
     <div id="chartdiv1"></div>
+    <!-- <script src="./index.js"></script> -->
+
+    <script src="./grafic.js"></script>
+    
+    <!-- <script src="grafic.js"></script> -->
+    <!-- <h1>Топ популярных языков программирования</h1> -->
+    
+    <!-- <div id="chartdiv1"></div> -->
 </body>
 
 </html>

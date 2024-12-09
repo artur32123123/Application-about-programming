@@ -11,3 +11,78 @@ h1 {
     max-width: 100%;
     margin: 0 auto;
   }
+
+  .input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+body {
+  /* font-family: Arial, sans-serif; */
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  /* height: 100vh; */
+  background-color: #f0f0f0;
+}
+/* Общие стили для контейнера */
+.input-container {
+  max-width: 500px; 
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+  background-color: #f9f9f9;
+}
+
+.label {
+  display: block;
+  margin-bottom: 8px; 
+  font-size: 20px;
+  font-weight: bold;
+  color: #333; 
+}
+
+/* Стили для полей ввода */
+input[type="number"],
+input[list] {
+  width: 100%; /* Ширина 100% */
+  padding: 10px; /* Внутренние отступы */
+  margin-bottom: 15px; /* Отступ снизу */
+  border: 1px solid #ccc; /* Рамка */
+  border-radius: 4px; /* Закругленные углы */
+  font-size: 16px; /* Размер шрифта */
+  transition: border-color 0.3s; /* Плавный переход для цвета рамки */
+}
+
+/* Эффект при наведении на поля ввода */
+input[type="number"]:focus,
+input[list]:focus {
+  border-color: #007BFF; /* Цвет рамки при фокусе */
+  outline: none; /* Убираем стандартный контур */
+}
+
+/* Стили для опций в datalist (не поддерживается в CSS, но можно стилизовать родительский элемент) */
+datalist {
+  display: none; /* Скрываем datalist, так как он не поддерживает стили */
+}
+
+.button {
+  background-color: #28a745; /* Зеленый цвет фона */
+  color: #fff; /* Белый цвет текста */
+  border: none; /* Без рамки */
+  padding: 12px 24px; /* Увеличенные внутренние отступы */
+  border-radius: 6px; /* Закругленные углы */
+  cursor: pointer; /* Указатель при наведении */
+  transition: background-color 0.3s, transform 0.2s; /* Плавный переход для фона и трансформации */
+  font-size: 18px; /* Увеличенный размер шрифта */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень для кнопки */
+}
+
+.button:hover {
+  background-color: #218838; /* Темно-зеленый цвет при наведении */
+  color: #fff; /* Белый цвет текста */
+  border: none; /* Без рамки */
+  transform: translateY(-2px); /* Легкий подъем кнопки при наведении */
+}
