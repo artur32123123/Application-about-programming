@@ -17,23 +17,26 @@ root.setThemes([
 //                                АЛГОРИТМЫ
 
 let algorithm = {
-  "binary": binarySearch, 
+  "binary": binarySearch,
   "selectionSort": 'selectionSort',
   "insertionSort": 'insertionSort',
   "mergeSort": 'mergeSort',
 }
+
 let input = document.getElementById('arrayCount');
 let button = document.getElementById('button');
 let select = document.getElementById('city-select');
 
 button.addEventListener('click', () => {
   let arrayCount = getValue()
-  if(arrayCount) {
+  if (arrayCount) {
     const numbers = Array.from({ length: arrayCount }, (_, index) => index + 1);
     var selectValue = select.value
-    algorithm[selectValue](numbers)    
+    let result = algorithm[selectValue](numbers)
+    
   }
 })
+
 // if (result !== -1) {
 //   console.log(`Элемент найден на индексе: ${result}`);
 // } else {
@@ -52,13 +55,21 @@ function getValue() {
 }
 
 function binarySearch(arr) {
+  let count = 0
   let target = arr.length
+  // let result = {
+  //   'count': count,
+  //   'index': target
+  // }
   let left = 0;
   let right = arr.length - 1;
   while (left <= right) {
+    // result['count'] += 1
+    count += 1
     const mid = Math.floor((left + right) / 2);
     if (arr[mid] === target) {
-      return mid;
+      return count;
+      // return [result];
     }
     if (arr[mid] < target) {
       left = mid + 1;
@@ -71,8 +82,11 @@ function binarySearch(arr) {
 
 
 //                                АЛГОРИТМЫ
+
+
 var data = []
-for (var i = 0; i < 1000; i++) {
+for (var i = 0; i < 100; i++) {
+  // i = i ** 2
   data.push({
     category: i,
     value1: i  // Значение value1 будет от 1 до 100
