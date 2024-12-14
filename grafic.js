@@ -33,6 +33,7 @@ button.addEventListener('click', () => {
     const numbers = Array.from({ length: arrayCount }, (_, index) => index + 1);
     var selectValue = select.value
     let result = algorithm[selectValue](numbers)
+    console.log(result);
     
   }
 })
@@ -80,12 +81,14 @@ function binarySearch(arr) {
   return -1;
 }
 
+console.log(Math.floor( Math.log(100)));
 
 //                                АЛГОРИТМЫ
 
 
 var data = []
-for (var i = 0; i < 100; i++) {
+for (var i = 0; i < 362; i++) {
+  // i = i * 100
   // i = i ** 2
   data.push({
     category: i,
