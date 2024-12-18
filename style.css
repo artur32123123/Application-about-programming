@@ -74,3 +74,9 @@ select:focus {
     background-color: #0056b3;
     transform: translateY(-2px);
 }
+
+.logarithmic { background-color: rgba(21, 255, 0, 0.193); }
+    .linear { background-color: rgba(9, 141, 0, 0.157); }
+    .linear-logarithmic { background-color: rgba(255, 204, 0, 0.157); }
+    .quadratic { background-color: rgba(255, 140, 0, 0.157); }
+    .cubic { background-color: rgba(255, 0, 0, 0.157); }

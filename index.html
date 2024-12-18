@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Big O</title>
 </head>
 
 <body>
@@ -16,17 +16,18 @@
     <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
     <div class="input-container">
         <label class="label" for="arrayCount">Введите количество элементов в массиве:</label>
-        <input id="arrayCount" type="number" placeholder="0" min="0">
+        <input id="arrayCount" type="number" placeholder="Введите значение от 10 до 1000" min="0">
         <label class="label" for="city-select">Выберите алгоритм сортировки:</label>
         <select name="city" id="city-select">
-            <option value="binary">Бинарный поиск</option>
-            <option value="bubble">Сортировки пузырьком</option>
-            <option value="quick">Быстрая сортировка</option>
-            <option value="huffman">Кодирование Хаффмена</option>
+            <option class="logarithmic" value="linear">Линейная сложность</option>
+            <option class="linear" value="binary">Логарифмическая сложность</option>
+            <option class="linear-logarithmic" value="bubble">Линейно-логарифмическая сложность</option>
+            <option class="quadratic" value="quick">Квадратичная сложность</option>
+            <option class="cubic" value="huffman">Кубическая сложность</option>
           </select>
         <input class="button" id="button" type="button" value="Отправить">
     </div>
-    <div id="chartdiv"></div>
+    <!-- <div id="chartdiv"></div> -->
     <div id="chartdiv1"></div>
     <!-- <script src="./index.js"></script> -->
 
@@ -34,7 +35,6 @@
     
     <!-- <script src="grafic.js"></script> -->
     <!-- <h1>Топ популярных языков программирования</h1> -->
-    
     <!-- <div id="chartdiv1"></div> -->
 </body>
 
