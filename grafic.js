@@ -1,4 +1,5 @@
 let algorithm = {
+<<<<<<< HEAD
   "binary": 'binarySearch',
   "linear": 'linearSort',
   "bubble": 'bubbleSort',
@@ -10,6 +11,35 @@ let sas = document.getElementById('sas')
 let input = document.getElementById('arrayCount');
 let button = document.getElementById('button');
 let select = document.getElementById('city-select');
+=======
+  "binary": binarySearch,
+  "selectionSort": 'selectionSort',
+  "insertionSort": 'insertionSort',
+  "mergeSort": 'mergeSort',
+}
+
+let input = document.getElementById('arrayCount');
+let button = document.getElementById('button');
+let select = document.getElementById('city-select');
+
+button.addEventListener('click', () => {
+  let arrayCount = getValue()
+  if (arrayCount) {
+    const numbers = Array.from({ length: arrayCount }, (_, index) => index + 1);
+    var selectValue = select.value
+    let result = algorithm[selectValue](numbers)
+    console.log(result);
+    
+  }
+})
+
+// if (result !== -1) {
+//   console.log(`Элемент найден на индексе: ${result}`);
+// } else {
+//   console.log('Элемент не найден');
+// }
+
+>>>>>>> 2495e795e73df462f607cf62056f075f207a45e3
 function getValue() {
   if (input.value <= 1000 && input.value > 0) {
     var array = parseInt(input.value);
@@ -24,13 +54,25 @@ function getValue() {
 function binarySearch(arr) {
   let count = 0
   let target = arr.length
+  // let result = {
+  //   'count': count,
+  //   'index': target
+  // }
   let left = 0;
   let right = arr.length - 1;
   while (left <= right) {
+<<<<<<< HEAD
+=======
+    // result['count'] += 1
+>>>>>>> 2495e795e73df462f607cf62056f075f207a45e3
     count += 1
     const mid = Math.floor((left + right) / 2);
     if (arr[mid] === target) {
       return count;
+<<<<<<< HEAD
+=======
+      // return [result];
+>>>>>>> 2495e795e73df462f607cf62056f075f207a45e3
     }
     if (arr[mid] < target) {
       left = mid + 1;
@@ -41,6 +83,7 @@ function binarySearch(arr) {
   return -1;
 }
 
+<<<<<<< HEAD
 button.addEventListener('click', () => {
   let arrayCount = getValue()
   if (arrayCount) {
@@ -63,6 +106,22 @@ function useBinarySearch(array) {
     pinchZoomX: true,
     paddingLeft: 0
   }));
+=======
+console.log(Math.floor( Math.log(100)));
+
+//                                АЛГОРИТМЫ
+
+
+var data = []
+for (var i = 0; i < 362; i++) {
+  // i = i * 100
+  // i = i ** 2
+  data.push({
+    category: i,
+    value1: i  // Значение value1 будет от 1 до 100
+  });
+}
+>>>>>>> 2495e795e73df462f607cf62056f075f207a45e3
 
 
   root.setThemes([
