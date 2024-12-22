@@ -2,16 +2,26 @@
   "dependencies": {
     "@amcharts/amcharts5": "^5.10.8",
     "@amcharts/amcharts5-fonts": "^5.0.1",
-    "@amcharts/amcharts5-geodata": "^5.1.4"
+    "@amcharts/amcharts5-geodata": "^5.1.4",
+    "normalize.css": "^8.0.1"
   },
+  "type": "module",
   "scripts": {
     "build": "webpack",
-    "start": "webpack --watch"
+    "dev": "webpack --mode development",
+    "prod": "webpack --mode production",
+    "watch": "webpack --mode development --watch"
   },
   "devDependencies": {
+    "css-loader": "^7.1.2",
+    "html-webpack-plugin": "^5.6.3",
+    "mini-css-extract-plugin": "^2.9.2",
     "sass": "^1.83.0",
     "sass-loader": "^16.0.4",
-    "webpack": "^5.97.1"
+    "style-loader": "^4.0.0",
+    "webpack": "^5.97.1",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.2.0"
   },
   "name": "application-about-programming",
   "version": "1.0.0",
@@ -26,5 +36,6 @@
     "url": "https://github.com/artur32123123/Application-about-programming/issues"
   },
   "homepage": "https://github.com/artur32123123/Application-about-programming#readme",
+  "keywords": [],
   "description": ""
 }
