@@ -1,8 +1,15 @@
 /*!**********************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/styles.scss ***!
   \**********************************************************************************************************/
+@charset "UTF-8";
 h1 {
   text-align: center;
+}
+
+.container {
+  max-width: 1620px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 #chartdiv {
@@ -11,7 +18,7 @@ h1 {
 }
 
 #chartdiv1 {
-  width: 70%;
+  width: 80%;
   height: 500px;
   max-width: 100%;
   margin: 0 auto;
@@ -22,6 +29,142 @@ body {
   background-color: #f0f2f5;
   margin: 0;
   padding: 20px;
+}
+body .index {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 20px;
+  background-color: #f4f4f4;
+  color: #333;
+}
+body .index h1 {
+  color: #2c3e50;
+  text-align: center;
+}
+body .index h2 {
+  color: #2980b9;
+  margin-top: 20px;
+}
+body .index p {
+  color: #555;
+  margin: 10px 0;
+}
+body .index .container {
+  max-width: 800px;
+  margin: auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+body .containers {
+  max-width: 1620px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.411);
+}
+body .containers section {
+  margin-bottom: 0px;
+  padding: 20px;
+  border: 1px solid #ced4da;
+  border-radius: 8px;
+  background-color: #f0f2f5;
+  transition: background-color 0.3s;
+}
+body .containers section:hover {
+  background-color: white;
+}
+body .containers section h1 {
+  text-align: center;
+  color: #000000;
+  margin-bottom: 15px;
+  font-size: 2.4em;
+  letter-spacing: 1px;
+}
+body .containers section h2 {
+  text-align: center;
+  color: #007bff;
+  margin-bottom: 15px;
+  font-size: 1.6em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+body .containers section p {
+  color: #333;
+  line-height: 1.6;
+  font-size: 1.3em;
+  text-align: center;
+  margin-bottom: 10px;
+}
+body .containers section ul,
+body .containers section ol {
+  margin-left: 20px;
+  color: #333;
+  padding-left: 10px;
+}
+body .containers section li {
+  margin-bottom: 5px;
+  position: relative;
+}
+body .containers section li:before {
+  content: "•";
+  color: #007bff;
+  position: absolute;
+  left: -15px;
+}
+body .prograiming-section {
+  margin-top: 100px;
+}
+body .prograiming-section * {
+  margin: 0;
+  padding: 0;
+}
+body .prograiming-section .accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: center;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+}
+body .prograiming-section .accordion:first-child {
+  border-top: 2px solid black;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+body .prograiming-section .accordion.active, body .prograiming-section .accordion:hover {
+  background-color: #ccc;
+}
+body .prograiming-section .active {
+  border-radius: 10px;
+  border: 2px solid black;
+}
+body .prograiming-section .last {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-bottom: 2px solid black;
+}
+body .prograiming-section .panel {
+  padding: 0 10px;
+  width: 100%;
+  text-align: center;
+  margin-left: 10px;
+  font-size: 22px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+body .ssss {
+  width: 500px;
+  height: 500px;
 }
 body .input-container {
   background-color: #ffffff;
@@ -93,11 +236,6 @@ body a {
 }
 body ul {
   list-style: none;
-}
-body .container {
-  max-width: 1620px;
-  margin: 0 auto;
-  padding: 20px;
 }
 body .flexbox {
   display: flex;

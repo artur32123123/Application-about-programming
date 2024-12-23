@@ -63,9 +63,6 @@ document.addEventListener("DOMContentLoaded", function() {
         let value1;
         switch (algoritmValue) {
           case 'binarySearch':
-            value1 = 200;
-            break;
-          case 'binarySearch':
             value1 = Math.log(i);
             break;
           case 'linearSort':
@@ -81,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function() {
             value1 = i ** 3;
             break;
           default:
-            console.error('Ты шо пес делаешь?');
+            console.error('Не балуйся, выбери алгоритм!');
             continue; 
         }
         data.push({
