@@ -17,6 +17,11 @@ h1 {
   height: 500px;
 }
 
+#chartdiv2 {
+  width: 100%;
+  height: 500px;
+}
+
 #chartdiv1 {
   width: 80%;
   height: 500px;
@@ -113,6 +118,89 @@ body .containers section li:before {
   color: #007bff;
   position: absolute;
   left: -15px;
+}
+body .prograiming-article {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+body .prograiming-article__desc {
+  margin-bottom: 20px;
+}
+body .prograiming-article__desc h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+body .prograiming-article__desc p {
+  font-size: 20px;
+  line-height: 1.5;
+  color: #555;
+  margin-bottom: 10px;
+}
+body .prograiming-article__definition {
+  margin-bottom: 20px;
+}
+body .prograiming-article__definition h1 {
+  font-size: 28px;
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+body .prograiming-article__definition p {
+  font-size: 20px;
+  line-height: 1.5;
+  color: #555;
+  margin-bottom: 10px;
+}
+body .prograiming-article__definition ul {
+  margin-left: 20px;
+  list-style-type: disc;
+}
+body .prograiming-article__definition ul li {
+  font-size: 20px;
+  color: #555;
+  margin-bottom: 5px;
+}
+body .prograiming-article__non-structural, body .prograiming-article__structural, body .prograiming-article__procedural, body .prograiming-article__OOP, body .prograiming-article__declarative, body .prograiming-article__functional, body .prograiming-article__logical {
+  margin-bottom: 20px;
+}
+body .prograiming-article__non-structural h2, body .prograiming-article__structural h2, body .prograiming-article__procedural h2, body .prograiming-article__OOP h2, body .prograiming-article__declarative h2, body .prograiming-article__functional h2, body .prograiming-article__logical h2 {
+  font-size: 27px;
+  text-align: center;
+  margin-top: 50px;
+  color: #333;
+  margin-bottom: 10px;
+}
+body .prograiming-article__non-structural h3, body .prograiming-article__structural h3, body .prograiming-article__procedural h3, body .prograiming-article__OOP h3, body .prograiming-article__declarative h3, body .prograiming-article__functional h3, body .prograiming-article__logical h3 {
+  font-size: 26px;
+  color: #34495e;
+  margin-bottom: 8px;
+}
+body .prograiming-article__non-structural p, body .prograiming-article__structural p, body .prograiming-article__procedural p, body .prograiming-article__OOP p, body .prograiming-article__declarative p, body .prograiming-article__functional p, body .prograiming-article__logical p {
+  font-size: 18px;
+  line-height: 1.5;
+  color: #555;
+  margin-bottom: 10px;
+}
+body .prograiming-article__non-structural ul, body .prograiming-article__structural ul, body .prograiming-article__procedural ul, body .prograiming-article__OOP ul, body .prograiming-article__declarative ul, body .prograiming-article__functional ul, body .prograiming-article__logical ul {
+  margin-left: 20px;
+  list-style-type: disc;
+}
+body .prograiming-article__non-structural ul li, body .prograiming-article__structural ul li, body .prograiming-article__procedural ul li, body .prograiming-article__OOP ul li, body .prograiming-article__declarative ul li, body .prograiming-article__functional ul li, body .prograiming-article__logical ul li {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 5px;
+}
+body .prograiming-article__non-structural blockquote, body .prograiming-article__structural blockquote, body .prograiming-article__procedural blockquote, body .prograiming-article__OOP blockquote, body .prograiming-article__declarative blockquote, body .prograiming-article__functional blockquote, body .prograiming-article__logical blockquote {
+  margin: 10px 0;
+  padding: 10px;
+  background-color: #e9ecef;
+  border-left: 5px solid #007bff;
+  font-style: italic;
+}
+body .prograiming-article__non-structural blockquote p, body .prograiming-article__structural blockquote p, body .prograiming-article__procedural blockquote p, body .prograiming-article__OOP blockquote p, body .prograiming-article__declarative blockquote p, body .prograiming-article__functional blockquote p, body .prograiming-article__logical blockquote p {
+  margin: 0;
 }
 body .prograiming-section {
   margin-top: 100px;
