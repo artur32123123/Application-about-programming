@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="./main.css">
@@ -7,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Big O</title>
 </head>
+
 <body class="container">
     <header class="flexbox">
         <div class="logo">
@@ -24,10 +26,10 @@
         <div class="algoritms">
             <ul class="flexbox">
                 <li><a href="./paradigms.html">Парадигмы программирования</a></li>
-                <li><a href="#">Операционные системы</a></li>
+                <li><a href="./os.html">Операционные системы</a></li>
             </ul>
         </div>
-               
+
     </header>
     <script src="https://cdn.amcharts.com/lib/5/percent.js"></script>
     <script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
@@ -35,6 +37,401 @@
     <script src="https://cdn.amcharts.com/lib/5/themes/Responsive.js"></script>
     <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
     <script defer src="./main.js"></script>
+   
+
+
+    <section class="containers ads">
+        <div class="page">
+            <div id="page-transition-container" style="opacity: 1; transform: none;">
+                <div class="mdTitle">
+                    <h1>Сложность алгоритмов и нотация Big O</h1>
+                </div>
+                <div class="mdHead">
+                    <h4 id="теги"><a href="#теги">Теги</a></h4>
+                    <div class="tag_js"><a
+                            href="#%D1%87%D1%82%D0%BE-%D1%82%D0%B0%D0%BA%D0%BE%D0%B5-%D0%BE-%D0%B1%D0%BE%D0%BB%D1%8C%D1%88%D0%BE%D0%B5">Что
+                            такое (О большое)</a></div> <br>
+                    <div class="tag_js"><a
+                            href="#o1---%D0%BA%D0%BE%D0%BD%D1%81%D1%82%D0%B0%D0%BD%D1%82%D0%BD%D0%B0%D1%8F-%D1%81%D0%BB%D0%B6%D0%BD%D0%BE%D1%81%D1%82%D1%8C">O(1)
+                            - Константная слжность</a></div> <br>
+                    <div class="tag_js"><a
+                            href="#on---%D0%BB%D0%B8%D0%BD%D0%B5%D0%B9%D0%BD%D0%B0%D1%8F-%D1%81%D0%BB%D0%BE%D0%B6%D0%BD%D0%BE%D1%81%D1%82%D1%8C">O(N)
+                            - Линейная сложность</a></div> <br>
+                    <div class="tag_js"><a
+                            href="#on--n-%D0%B8%D0%BB%D0%B8-on2---%D1%8D%D0%BA%D1%81%D0%BF%D0%BE%D0%BD%D0%B5%D0%BD%D1%86%D0%B8%D0%B0%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F-%D1%81%D0%BB%D0%BE%D0%B6%D0%BD%D0%BE%D1%81%D1%82%D1%8C">O(n
+                            * n) или O(n2) - Квадратичная сложность</a></div> <br>
+                    <div class="tag_js"><a
+                            href="#o2n-%D1%8D%D0%BA%D1%81%D0%BF%D0%BE%D0%BD%D0%B5%D0%BD%D1%86%D0%B8%D0%B0%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F-%D1%81%D0%BB%D0%BE%D0%B6%D0%BD%D0%BE%D1%81%D1%82%D1%8C">O(2^n)
+                            - Экспоненциальная сложность</a></div> <br>
+                    <div class="tag_js"><a
+                            href="#olog-n---%D0%BB%D0%BE%D0%B3%D0%B0%D1%80%D0%B8%D1%84%D0%BC%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%BE%D0%B5-%D0%B2%D1%80%D0%B5%D0%BC%D1%8F">O(log
+                            n) - Логарифмическое время</a></div> <br>
+                    <div class="tag_js"><a href="#%D1%8D%D1%82%D0%BE-%D0%B2%D0%B0%D0%B6%D0%BD%D0%BE">Это
+                            важно</a>
+                    </div> <br>
+                    <div class="tag_js"><a
+                            href="#%D0%BEn--log-n---%D0%BB%D0%BE%D0%B3%D0%B0%D1%80%D0%B8%D1%84%D0%BC%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8-%D0%BB%D0%B8%D0%BD%D0%B5%D0%B9%D0%BD%D0%B0%D1%8F-%D1%81%D0%BB%D0%BE%D0%B6%D0%BD%D0%BE%D1%81%D1%82%D1%8C">О(n
+                            * log n) - Логарифмически линейная сложность</a></div> <br>
+                    <div class="tag_js"><a href="#%D0%B8%D1%82%D0%BE%D0%B3">Итог</a> </div>
+                </div>
+                <small> Многие из приведенных здесь алгоритмов я буду разбираю полностью в отдельных уроках.
+                    Здесь
+                    мы говорим лишь об их сложности. И так же тут я не буду пока что касаться деревьев и графов
+                </small>
+                <h2 id="что-такое-о-большое"><a href="#что-такое-о-большое">Что такое (О большое)</a></h2>
+                <p><b>О-большое (Big O) </b> – это специальная нотация, используемая для описания
+                    асимптотической
+                    сложности; то есть, скорости роста времени выполнения алгоритма с увеличением размера
+                    входных
+                    данных. Это нужно, чтобы понимать, насколько быстро или медленно работают алгоритмы. В
+                    О-большом
+                    нет коэффициентов, минут, секунд и так далее. Об этом будет наглядно показано в примере про
+                    логарифмическую сложность O(log n).</p>
+                <h2 id="o1---константная-сложность"><a href="#o1---константная-сложность">O(1) - Константная
+                        сложность</a></h2>
+                <p>Такая сложность у нас будет, если у нас лёгкий алгоритм, который никак не взаимодействует с
+                    итерируемыми входными данными, например, такой лёгкой функцией:</p>
+                <pre><code class="hljs language-javascript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">sum</span> (x,y) {
+  <span class="hljs-keyword">return</span> x + y;
+}
+
+<span class="hljs-title function_">sum</span>(<span class="hljs-number">10</span>,<span class="hljs-number">10</span>);
+</code></pre>
+                <p>Такая сложность означает, что время выполнения не зависит от входных данных, то есть
+                    константная,
+                    что значит, темп роста это постоянная константа.<br>
+                    Или вот такой пример:</p>
+                <pre><code class="hljs language-javascript"><span class="hljs-keyword">let</span> arr = [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>];
+
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(arr[<span class="hljs-number">2</span>]) <span class="hljs-comment">// 3</span>
+</code></pre>
+                <p>Мы просто получаем элемент по индексу в массиве. Если у нас массив будет из 1000 элементов,
+                    то
+                    скорость получения одного элемента по индексу не изменится, поэтому сложность такого
+                    алгоритма
+                    также будет O(1).</p>
+                <h2 id="on---линейная-сложность"><a href="#on---линейная-сложность">O(N) - Линейная
+                        сложность</a>
+                </h2>
+                <p>Линейная сложность <code>O(N)</code> - это когда время выполнения алгоритма пропорционально
+                    размеру входных данных. Если есть какая-то последовательность действий, будь то перебор
+                    списка
+                    или последовательность циклов, то у всего этого будет сложность <code>O(N)</code>. <br>
+                    <b> Линейный поиск</b>:
+                </p>
+                <pre><code class="hljs language-javascript"><span class="hljs-keyword">const</span> arr = [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>];
+
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">linearSearch</span>(<span class="hljs-params">value, list</span>) {
+    <span class="hljs-keyword">let</span> found = <span class="hljs-literal">false</span>; 
+    <span class="hljs-keyword">let</span> position = -<span class="hljs-number">1</span>; 
+    <span class="hljs-keyword">let</span> index = <span class="hljs-number">0</span>;
+
+    <span class="hljs-keyword">while</span>(!found &amp;&amp; index &lt; list.<span class="hljs-property">length</span>) {
+      <span class="hljs-keyword">if</span>(list[index] == value) {
+        found = <span class="hljs-literal">true</span>;    
+        position = index;
+      } <span class="hljs-keyword">else</span> {
+        index += <span class="hljs-number">1</span>;
+      }
+    }
+
+    <span class="hljs-comment">// если тут еще будут какие то не вложенные друг в друга цилкы, то сложность все равно будет O(N)</span>
+
+    <span class="hljs-keyword">return</span> position;
+}
+
+
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-title function_">linearSearch</span>(<span class="hljs-number">8</span>,arr)); <span class="hljs-comment">// -1</span>
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-title function_">linearSearch</span>(<span class="hljs-number">3</span>,arr)); <span class="hljs-comment">// индекс 2</span>
+</code></pre>
+                <p>Например, если нам нужно найти имя из массива, где есть 20 имён, и для того, чтобы его найти,
+                    мы
+                    используем линейный поиск, то в худшем случае нам потребуется 20 операций, это и есть
+                    линейная
+                    сложность.
+                    Еще раз подчерку, что если у нас <b> внутри </b> такого поиска будет хоть <b>10 не вложенных
+                        циклов</b>, сложность все равно будет <b>линейная</b>.</p>
+                <h2 id="on--n-или-on2---квадратичная-сложность"><a href="#on--n-или-on2---квадратичная-сложность">O(n *
+                        n) или O(n2) - Квадратичная
+                        сложность</a></h2>
+                <p>O(n<sup>2</sup>) или O(n * n) - это квадратичная сложность, такие алгоритмы имеют в себе два
+                    вложенных цикла: Один нужен для того чтобы проходить по всему массиву, а второй, чтобы
+                    находить
+                    место очередному элементу в уже отсортированной части.<br></p>
+                <b>Сортировка выбором:</b>
+                <pre><code class="hljs language-javascript"><span class="hljs-keyword">const</span> arr = [<span class="hljs-number">9</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">5</span>,<span class="hljs-number">9</span>,<span class="hljs-number">1</span>,<span class="hljs-number">10</span>,<span class="hljs-number">58</span>,-<span class="hljs-number">10</span>]; 
+
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">selectionSort</span>(<span class="hljs-params">arr</span>) {
+    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; arr.<span class="hljs-property">length</span>; i++) { <span class="hljs-comment">// внешний цикл</span>
+        <span class="hljs-keyword">let</span> indexMin = i;
+            <span class="hljs-keyword">for</span>(<span class="hljs-keyword">let</span> j = i+<span class="hljs-number">1</span>; j &lt; arr.<span class="hljs-property">length</span>; j++) { <span class="hljs-comment">// внутрений цикл, который  каждую итерацию внешнего цикла будет проходить все элементы в массиве</span>
+                <span class="hljs-keyword">if</span>(arr[j] &lt; arr[indexMin]) {
+                    indexMin = j;
+                }
+            }
+
+            <span class="hljs-keyword">let</span> tmp = arr[i]; 
+            arr[i] = arr[indexMin];
+            arr[indexMin] = tmp; 
+
+    }
+
+    <span class="hljs-keyword">return</span> arr;
+}
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-title function_">selectionSort</span>(arr));
+</code></pre>
+                <p>Увидели такой алгоритм с двумя циклами, значит это О(n<small>2</small>). Но что если будет
+                    подобный алгоритм, но внутри будет еще один вложенный цикл?</p>
+                <pre><code class="hljs language-javascript"><span class="hljs-comment">// просто псевод пример</span>
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">sort</span>(<span class="hljs-params">arr</span>) {
+  <span class="hljs-keyword">for</span> () { <span class="hljs-comment">// внешний цикл</span>
+    <span class="hljs-keyword">for</span> () { <span class="hljs-comment">// внутрений цикл, </span>
+      <span class="hljs-keyword">if</span> (<span class="hljs-literal">true</span>) {
+        <span class="hljs-keyword">for</span> () {  <span class="hljs-comment">// еще внутрений цикл, </span>
+          <span class="hljs-keyword">if</span> (<span class="hljs-literal">true</span>) {
+            <span class="hljs-comment">// и тд</span>
+          }
+        }
+      }
+    }
+
+  }
+
+  <span class="hljs-keyword">return</span> arr;
+}
+
+</code></pre>
+                <p>В таком случае, сложность будет, как можно было догадаться, O(n<sup>3</sup>) - кубическая
+                    сложность и так далее. Если цикл будет не вложенный, то сложность не изменится. В общем,
+                    если с
+                    квадратичной сложностью размер данных увеличится в 2 раза, то время выполнения алгоритма
+                    увеличится в 4 раза, с кубической сложностью - в 8 раз, со сложностью четвертой степени - в
+                    16 и
+                    так далее. Думаю, смысл понятен. Вложенные циклы могут значительно увеличивать сложность
+                    алгоритма, делая его менее эффективным (но не во всех случаях, конечно). Поэтому нужно
+                    учитывать
+                    эту особенность и стремиться к минимизации вложенных циклов, если это возможно.</p>
+                <h2 id="o2n-экспоненциальная-сложность"><a href="#o2n-экспоненциальная-сложность">O(2^n)
+                        Экспоненциальная сложность</a></h2>
+                <p>Алгоритмы с этой сложностью выполняются очень медленно, в зависимости от количества входных
+                    данных. <br>
+                    <b>Рекурсивный расчет чисел Фибоначчи:</b>
+                </p>
+                <pre><code class="hljs language-javascript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">fibonacci</span>(<span class="hljs-params">n</span>) {
+    <span class="hljs-keyword">if</span> (n &lt;= <span class="hljs-number">1</span>) <span class="hljs-keyword">return</span> n;
+    <span class="hljs-keyword">return</span> <span class="hljs-title function_">fibonacci</span>(n - <span class="hljs-number">1</span>) + <span class="hljs-title function_">fibonacci</span>(n - <span class="hljs-number">2</span>);
+}
+<span class="hljs-title function_">fibonacci</span>(<span class="hljs-number">4</span>); <span class="hljs-comment">// 3</span>
+<span class="hljs-title function_">fibonacci</span>(<span class="hljs-number">5</span>); <span class="hljs-comment">// 5</span>
+<span class="hljs-title function_">fibonacci</span>(<span class="hljs-number">6</span>); <span class="hljs-comment">// 8</span>
+<span class="hljs-title function_">fibonacci</span>(<span class="hljs-number">80</span>); <span class="hljs-comment">// попробуете что то такое и браузер у вас скорее всего зависнет.</span>
+</code></pre>
+                <p>Это называется экспоненциальная сложность, потому что общее число операций в результате
+                    увеличивается в геометрической прогрессии. В том же рекурсивном расчете чисел Фибоначчи мы,
+                    вызывая функцию, вызываем ее еще два раза. В каждом из этих вызовов мы еще по два раза ее
+                    вызываем и так далее. Количество операций каждый раз удваивается.</p>
+                <h2 id="olog-n---логарифмическое-время"><a href="#olog-n---логарифмическое-время">O(log n) -
+                        Логарифмическое время</a></h2>
+                <p>Логарифмическое время - это сложность, у которой количество операций <b>уменьшается в два
+                        раза с
+                        каждой итерацией</b>. Это обычно возможно при работе с более сложными структурами
+                    данных,
+                    например, при применении алгоритмов на деревьях или графах.
+                    Логарифмическое время может соответствовать принципу "разделяй и властвуй" (divide and
+                    conquer)
+                    - это метод проектирования алгоритмов, который заключается в разбиении задачи на более
+                    мелкие
+                    подзадачи и решении их независимо друг от друга, а затем объединении полученных результатов
+                    в
+                    общее решение исходной задачи.</p>
+                <ul>
+                    <li>Логарифм - это обратная операция возведению в степень. Допустим, у нас есть 10 * 10 =
+                        100 -
+                        это 10<sup>2</sup> степени. В свою очередь, логарифм будет обратно этому:
+                        log<sup>10</sup>100 = 2. То есть, если в степени мы ищем, то сколько будет, если 10
+                        перемножить 2 раза, то в логарифме мы ищем, сколько раз нужно перемножить 10, чтобы
+                        получить
+                        100.</li>
+                </ul>
+                <b> Алгоритм бинарный поиск: </b>
+                <!-- --> <!-- -->
+                <br>
+                <p>В бинарном поиске, когда мы ищем элемент, мы ищем середину и, если позиция искомого элемента
+                    допустим больше, чем все то, что ниже середины, то эту часть мы отбрасываем. Далее повторяем
+                    с
+                    оставшейся частью, пока не найдем искомый элемент.</p>
+                <pre><code class="hljs language-javascript"><span class="hljs-keyword">const</span> array = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>, <span class="hljs-number">9</span>, <span class="hljs-number">10</span>];
+
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">binarySearch</span>(<span class="hljs-params">array, item</span>) {
+
+
+  <span class="hljs-keyword">let</span> start = <span class="hljs-number">0</span>; 
+  <span class="hljs-keyword">let</span> end = array.<span class="hljs-property">length</span>;
+  <span class="hljs-keyword">let</span> middle; 
+  <span class="hljs-keyword">let</span> found = <span class="hljs-literal">false</span>; 
+  <span class="hljs-keyword">let</span> position = -<span class="hljs-number">1</span>; 
+
+  <span class="hljs-keyword">while</span> (found === <span class="hljs-literal">false</span> &amp;&amp; start &lt;= end) { 
+    middle = <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">floor</span>((start + end) / <span class="hljs-number">2</span>); 
+
+    <span class="hljs-keyword">if</span> (array[middle] === item) { 
+      found = <span class="hljs-literal">true</span>;
+      position = middle; 
+
+      <span class="hljs-keyword">return</span> position; 
+    }
+    
+    <span class="hljs-keyword">if</span> (item &lt; array[middle]) {  <span class="hljs-comment">// если искомый элемент меньше середины</span>
+      end = middle - <span class="hljs-number">1</span>;  <span class="hljs-comment">// оставляем правую часть</span>
+    } 
+    <span class="hljs-keyword">else</span> {
+      start = middle + <span class="hljs-number">1</span>; <span class="hljs-comment">// иначе оставляем левую часть</span>
+    }
+  }
+  
+  <span class="hljs-keyword">return</span> position; 
+}
+
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-title function_">binarySearch</span>(array, <span class="hljs-number">4</span>)); <span class="hljs-comment">// 3</span>
+</code></pre>
+                <h2 id="это-важно"><a href="#это-важно">Это важно!</a></h2>
+                <b> Почему логарифм? </b>
+                <ul>
+                    <li>
+                        <p>Еще раз, при каждом шаге бинарного поиска или бинарного дерева множество делится на
+                            два
+                            подмножества, одно из которых выбрасывается, а второе остается. Это позволяет
+                            сокращать
+                            количество возможных вариантов в два раза на каждом шаге. Вспоминаем, что логарифм
+                            позволяет узнать нам сколько раз мы должны разделить массив на части(кол операций),
+                            что
+                            бы найти элемент. В случае с массивом из <code>10</code> элементов в худшем случае
+                            нам
+                            понадобится <code>4</code> операции. log<sub>2</sub><sup>10</sup> = 3.32, что
+                            округляется до 4. Двойка после log это основание дерева, если бы мы работали с
+                            тернарным
+                            деревом, там была бы тройка. Но! Мы сейчас не работаем с деревом. Просто бинарный
+                            поиск
+                            и бинарное дерево используют похожий алгоритм для поиска элементов в отсортированном
+                            множестве. Так вот в основании у нас <code>2</code>, массив из <code>10</code>
+                            элементов. Мы знаем, что в худшем случае нам понадобится <code>4</code> операции. Но
+                            как
+                            еще можно это определить? Мы можем поделить массив на основание пока не упремся в
+                            ноль
+                            или единицу <code>10/2 = 5, 5/2 = 2.5, 2.5/2 = 1.25, 1.25/2 = 0,625 </code> = Мы
+                            сделали
+                            это за 4 раза. Значит, на массив из 10 имён потребовалось 4 операции.</p>
+                    </li>
+                    <li>
+                        <p>Так, почему же логарифм? Так вот, все потому что данные делятся на мелкие части,
+                            которые
+                            обрабатываются за одинаковое время. Таким образом, при увеличении размера входных
+                            данных
+                            вдвое, алгоритм будет выполняться на одну итерацию больше, а не удваивать время
+                            выполнения. Представим, что массив у нас теперь из 20 элементов,
+                            log<sub>2</sub><sup>20
+                            </sup> = 4.322, округляется до 5. У нас массив стал в два раза больше, но количество
+                            операций увеличилось всего лишь на одну операцию. Вот это и есть алгоритм с
+                            логарифмическим временем, будь то работа с деревом или бинарный поиск по массиву.
+                        </p>
+                    </li>
+                    <li>
+                        <p>Теперь самое интересное. Вы могли заметить, что работали мы сейчас с логарифмом, но
+                            не с
+                            нотацией O больше. В O большом нет никаких коэффициентов и количества операций или
+                            секунд, минут или чего угодно. В O большом для бинарного поиска на массиве из 10
+                            элементов сложность будет O(log n), а для массива из 20 элементов или из 1000 -
+                            сложность будет та же самая - O(log n). Нам важен темп роста количества операций с
+                            увеличением размера входных данных. И, сравнивая алгоритм со сложностью O(log n) и
+                            алгоритм со сложностью O(n), мы будем знать, что первый алгоритм будет намного
+                            быстрее
+                            второго, а с увеличением входных данных он будет намного намного быстрее. Вот и вся
+                            суть.</p>
+                    </li>
+                </ul>
+                <h2 id="оn--log-n---логарифмически-линейная-сложность"><a
+                        href="#оn--log-n---логарифмически-линейная-сложность">О(n * log n) - Логарифмически
+                        линейная
+                        сложность</a></h2>
+                <p>О (n * log n) - это сложность алгоритма, которая увеличивается с ростом размера входных
+                    данных
+                    (n), но растет в логарифмическом масштабе. Это означает, что при увеличении размера входных
+                    данных в n раз, время работы алгоритма увеличится примерно в log n раз.</p>
+                <b>Алгоритм быстрая сортировка: </b>
+                <pre><code class="hljs language-javascript"><span class="hljs-keyword">const</span> values = [<span class="hljs-number">2</span>, <span class="hljs-number">27</span>, <span class="hljs-number">14</span>, <span class="hljs-number">52</span>, <span class="hljs-number">31</span>, <span class="hljs-number">96</span>, <span class="hljs-number">73</span>, <span class="hljs-number">47</span>, <span class="hljs-number">22</span>, <span class="hljs-number">6</span>];
+
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">QuickSort</span>(<span class="hljs-params">List</span>) {
+
+  <span class="hljs-keyword">if</span> (<span class="hljs-title class_">List</span>.<span class="hljs-property">length</span> &lt;= <span class="hljs-number">1</span>) {
+    <span class="hljs-keyword">return</span> <span class="hljs-title class_">List</span>;
+  }
+
+  <span class="hljs-keyword">const</span> pivot = <span class="hljs-title class_">List</span>[<span class="hljs-title class_">List</span>.<span class="hljs-property">length</span> - <span class="hljs-number">1</span>];
+  <span class="hljs-keyword">const</span> leftList = []; 
+  <span class="hljs-keyword">const</span> rightList = []; 
+
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-title class_">List</span>.<span class="hljs-property">length</span> - <span class="hljs-number">1</span>; i++) {
+
+    <span class="hljs-keyword">if</span> (<span class="hljs-title class_">List</span>[i] &lt; pivot) {
+      leftList.<span class="hljs-title function_">push</span>(<span class="hljs-title class_">List</span>[i]);
+
+    }
+    <span class="hljs-keyword">else</span> {
+      rightList.<span class="hljs-title function_">push</span>(<span class="hljs-title class_">List</span>[i]);
+    }
+  }
+
+  <span class="hljs-keyword">return</span> [...<span class="hljs-title class_">QuickSort</span>(leftList), pivot, ...<span class="hljs-title class_">QuickSort</span>(rightList)]; <span class="hljs-comment">// вот тут мы снова проходимся по каждому подмассиву</span>
+}
+
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-title class_">QuickSort</span>(values));
+</code></pre>
+                <p>У нас есть внутри рекурсивная операция, которая разделяет массив на меньшие части, и каждая
+                    часть
+                    сортируется по отдельности. Это ведет к сложности, равной произведению числа элементов в
+                    массиве
+                    (n) на количество разбиений (log n), что вместе дают нам сложность O(n * log n). То есть у
+                    нас
+                    есть две операции: разделение массива на части O(log n), цикл с итерациями по этим частям
+                    O(N),
+                    и общая сложность будет О(n * log n).</p>
+                <h2 id="итог"><a href="#итог">Итог.</a></h2>
+                <ul>
+                    <li>Получение элемента массива или какой либо коллекции – это O(1) или простая функция без
+                        итерируемых входных данных, это все будет O(1).</li>
+                    <li>Перебор массива или коллекции – это O(n). Даже если у нас будет несколько циклов,
+                        сложность
+                        будет та же, главное, чтобы они были не вложены друг в друга.</li>
+                    <li>Вложенные циклы по той же коллекции(массиву) – это O(n^2). Если есть три вложенных
+                        цикла,
+                        будет уже O(n^3) и так далее.</li>
+                    <li>Разделяй и властвуй (Divide and Conquer) – всегда O(log n). То есть, где мы делим
+                        структуру
+                        на подчасти.</li>
+                    <li>Итерации, которые используют “Разделяй и властвуй” (Divide and Conquer) – это O(n log
+                        n).
+                        Если мы используем деление на части O(log n) и при этом это все происходит в неких
+                        итерациях, то это O(n log n).</li>
+                    <li>O(2^n) – экспоненциальная сложность. Это когда количество операций удваивается при
+                        добавлении каждого нового элемента в набор данных.</li>
+                </ul>
+                <p>И под конец давайте посмотрим на все сложности, от быстрого к медленному алгоритму, что бы
+                    знать,
+                    что в общем быстрее, а что нет в сравнении: <b>быстро:[</b> O(1), O(log n), O(N), O(n * log
+                    n),
+                    O(n<sup>2</sup>) <b>]:медленно</b>.</p>
+                <br>
+                <p>Ну и в конце я скажу, что следует помнить, это всё общая оценка и фактическая сложность
+                    алгоритма
+                    может зависеть от множества факторов, таких как объем данных, способ их обработки,
+                    используемые
+                    структуры данных и т.д.</p>
+                <br>
+                <p>Всем спасибо за внимание. Кому всем? ты тут один.</p>
+               
+            </div>
+        </div>
+    </section>
     <div class="input-container">
         <label class="label" for="arrayCount">Введите количество элементов в массиве:</label>
         <input id="arrayCount" type="number" placeholder="Введите значение от 10 до 1000" min="0">
@@ -48,10 +445,7 @@
         </select>
         <input class="button" id="button" type="button" value="Отправить">
     </div>
-    
-    
     <div id="chartdiv1"></div>
-  
-  
 </body>
+
 </html>

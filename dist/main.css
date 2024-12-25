@@ -29,6 +29,38 @@ h1 {
   margin: 0 auto;
 }
 
+pre {
+  background-color: #2e2e2e;
+  color: #f8f8f2;
+  padding: 15px;
+  border-radius: 5px;
+  overflow-x: auto;
+  font-family: "Courier New", Courier, monospace;
+  line-height: 1.5;
+}
+pre code {
+  display: block;
+  white-space: pre;
+}
+
+.hljs.keyword {
+  color: #66d9ef;
+  font-weight: bold;
+}
+.hljs.title.function_ {
+  color: #a6e22e;
+}
+.hljs.number {
+  color: #f92672;
+}
+.hljs.string {
+  color: #e6db74;
+}
+.hljs.comment {
+  color: #75715e;
+  font-style: italic;
+}
+
 body {
   font-family: "Arial", sans-serif;
   background-color: #f0f2f5;
@@ -257,6 +289,7 @@ body .ssss {
 body .input-container {
   background-color: #ffffff;
   display: flex;
+  margin-top: 100px !important;
   flex-direction: column;
   align-items: center;
   border-radius: 10px;

@@ -1,4 +1,3 @@
-import path from 'path';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 
 export default {
@@ -13,8 +12,11 @@ export default {
 					'css-loader',
 					'sass-loader',
 				],
+				
 			},
+			
 		],
+		
 	},
 	
 };
