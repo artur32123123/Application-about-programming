@@ -61,6 +61,14 @@ pre code {
   font-style: italic;
 }
 
+footer {
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 90px !important;
+}
+
 body {
   font-family: "Arial", sans-serif;
   background-color: #f0f2f5;
